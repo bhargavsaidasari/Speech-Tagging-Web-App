@@ -2,6 +2,14 @@
 <html lang="en">
     <head>
         <title>Speech Tagging</title>
+        <style>
+            body {
+                background-image: url("background.jpg");
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+
+        </style>
         <meta charset="utf-8">
         <meta name="viewport"  content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -26,13 +34,19 @@
 
     </head>
     <body>
-
         <div class="container">
             <h1>POS tagger using HMM</h1>
-            <h3> The training has been done utilizing the <a href="https://pomegranate.readthedocs.io/en/latest/">
-                Pomegranate </a> library on the <a href="https://en.wikipedia.org/wiki/Brown_Corpus">
+            <h3> 
+                <strong> Training </strong> 
+                Training has been done utilizing the 
+                <a href="https://pomegranate.readthedocs.io/en/latest/">Pomegranate </a> 
+                library on the <a href="https://en.wikipedia.org/wiki/Brown_Corpus">
                 Brown Corpus dataset</a> only including the <a href = "https://arxiv.org/pdf/1104.2086.pdf">
-                Universal Parts of Speech Tagset</a> . </h3>
+                Universal Parts of Speech Tagset</a> . <a href="https://github.com/bhargavsaidasari/Machine-Learning-Projects/blob/master/POS%20Tagging%20-%20HMM/HMM%20Tagger.ipynb">
+                The code for training can be found here </a></h3>
+            <h3> <strong>Inference: </strong> 
+                Inference is done via AWS Lambda and API Gateway. <a href="https://github.com/bhargavsaidasari/Speech-Tagging-Web-App">
+            The corresponding Lambda function can be accessed here.</a> </h3>
             <p>Enter your sentence below and click submit to find out...</p>
             <form method="POST"
                   action="https://n3k6zt5sd7.execute-api.us-west-2.amazonaws.com/prod"
