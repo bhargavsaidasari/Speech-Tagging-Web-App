@@ -37,6 +37,12 @@
         <div class="container">
             <h1>POS tagger using HMM</h1>
             <h3> 
+                Speech Tagging is an important task in Natural Language Processing and finds
+                applications in Named Entity Recognition, Sentiment Analysis, Question Answering, 
+                and Word Sense Disambiguation. This project builds a Speech Tagger utilizing a bigram Hidden Markov Model
+                and Viterbi decoding.
+            </h3> 
+            <h3>
                 <strong> Training </strong> 
                 Training has been done utilizing the 
                 <a href="https://pomegranate.readthedocs.io/en/latest/">Pomegranate </a> 
@@ -47,10 +53,10 @@
             <h3> <strong>Inference: </strong> 
                 Inference is done via AWS Lambda and API Gateway. <a href="https://github.com/bhargavsaidasari/Speech-Tagging-Web-App">
             The corresponding Lambda function can be accessed here.</a> </h3>
-            <p>Enter your sentence below and click submit to find out...</p>
+            <h4> <p> Enter your sentence below and click submit to find out...</p> </h4>
             <form method="POST"
                   action="https://n3k6zt5sd7.execute-api.us-west-2.amazonaws.com/prod"
-                  onsubmit="return submitForm(this);" >                     <!-- HERE IS WHERE YOU NEED TO ENTER THE API URL -->
+                  onsubmit="return submitForm(this);" >                    
                 <div class="form-group">
                     
                     <label for="review">Sentence:</label>
